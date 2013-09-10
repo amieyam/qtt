@@ -233,7 +233,28 @@ function stopIt() {
 			
 			document.getElementById('txtlastresult').innerHTML = topScore + "<br><br>" + "Last" + " " + dateandtime + "<br><br>" + "View more results in the FULL VERSION"; 
 			*/
-			
+			//here starts the AJAX
+		var xmlhttp;
+			 if (window.XMLHttpRequest)
+			 {
+				xmlhttp=new XMLHttpRequest();
+			 }
+			 else
+			 {
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			 }
+			 
+			 xmlhttp.onreadystatechange=function()
+			 {
+			 if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				 {
+				 console.log("GOOD");
+				 }
+			 }
+			xmlhttp.open('GET', 'http://www.gordoncollegeccs.edu.ph/qtt/proxy.php?a='+spd, true);
+			console.log("SCORE SUBMITTED");
+			xmlhttp.send();
+			console.log("DONE!");
 		
 		}
 		
@@ -280,7 +301,29 @@ function stopIt() {
 		document.getElementById('txtresult').innerHTML = "You made " + "<strong>" + badWords + "</strong>" + " error/s, but q-typed at a speed of " + "<strong>" + spd + "</strong>" + " words per minute!";
 		document.theForm.typed.value = "";
 		document.theForm.given.value = "";
-
+		
+	//here starts the AJAX
+		var xmlhttp;
+			 if (window.XMLHttpRequest)
+			 {
+				xmlhttp=new XMLHttpRequest();
+			 }
+			 else
+			 {
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			 }
+			 
+			 xmlhttp.onreadystatechange=function()
+			 {
+			 if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				 {
+				 console.log("GOOD");
+				 }
+			 }
+			xmlhttp.open('GET', 'http://www.gordoncollegeccs.edu.ph/qtt/proxy.php?a='+spd, true);
+			console.log("SCORE SUBMITTED");
+			xmlhttp.send();
+			console.log("DONE!");
    }
 	
   
