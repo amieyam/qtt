@@ -233,6 +233,7 @@ function stopIt() {
 			
 			document.getElementById('txtlastresult').innerHTML = topScore + "<br><br>" + "Last" + " " + dateandtime + "<br><br>" + "View more results in the FULL VERSION"; 
 			*/
+			
 			//here starts the AJAX
 		var xmlhttp;
 			 if (window.XMLHttpRequest)
